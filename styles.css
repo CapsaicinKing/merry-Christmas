@@ -84,7 +84,7 @@ img {
 /*
     The thing that stays at the top of the screen (greenery with decor)
 */
-img[src='/images/hr.png'] { 
+img[src='./images/hr.png'] { 
     width: 100%;
     position: fixed;
     top: -3rem;
@@ -94,7 +94,7 @@ img[src='/images/hr.png'] {
 /*
     The thing that stays at the bottom of the screen (Christmas lights)
 */
-img[src='/images/hr_lights.png'] {
+img[src='./images/hr_lights.png'] {
     width: 120%;
     position: fixed;
     left: -5%;
@@ -186,9 +186,9 @@ hr#special-hr {
         margin-top: 3.5rem;
     }
 
-    img[src='/images/hr.png'] {
+    img[src='./images/hr.png'] {
         position: absolute;
-        left: -1.5rem;
+        left: -2.5rem;
         top: -5.5rem;
         width: 600px;
     }
