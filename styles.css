@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Diphylleia&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background-color: #c94c4c;
+}
+
+hr {
+    height: 10px;
+    background-image: repeating-linear-gradient(
+        45deg,
+        #ec0f0f,
+        #ec0f0f 10px,
+        #f4f4f4 10px,
+        #f4f4f4 20px
+    );
+    border: none;
+}
+  
+#small-screen-only {
+    display: flex;
+    justify-items: center;
+}
+
+#contain-the-screen {
+    max-width: 600px;
+    margin: 0 auto;
+    border: none;
+}
+
+#anchor-the-hr {
+    position: relative;
+}
+
+header {
+    padding: 2rem 1.5rem;
+    background-image: linear-gradient(to bottom right, red, #ec0f0f);
+}
+
+h1 {
+    font-size: 3rem;
+    font-family: 'Rubik Doodle Shadow', monospace, serif;
+    text-align: center;
+    color: #DDD;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+img {
+    width: 100%;
+}
+
+.candy-cane-container {
+    background-color: #f96767;
+    border: 20px solid green;
+    border-image: repeating-linear-gradient(
+        45deg,
+        #277e62,
+        #277e62 20px,
+        #f4f4f4 20px,
+        #f4f4f4 40px
+    )
+    20;
+    color: white;
+    font-family: 'Diphylleia', serif;
+    /* padding: 20px; */
+    overflow: hidden;
+}
+
+.candy-cane-container blockquote {
+    padding: 1.125rem;
+}
+
+/*
+    The thing that stays at the top of the screen (greenery with decor)
+*/
+img[src='/images/hr.png'] { 
+    width: 100%;
+    position: fixed;
+    top: -3rem;
+    left: 0;
+}
+
+/*
+    The thing that stays at the bottom of the screen (Christmas lights)
+*/
+img[src='/images/hr_lights.png'] {
+    width: 120%;
+    position: fixed;
+    left: -5%;
+    bottom: -2rem;
+}
+
+main {
+    display: grid;
+    grid-template: repeat(5, 6rem) / repeat(6, 1fr);
+    grid-template-areas: "p p y y y y"
+                         "p p y y y y"
+                         "x x x a a a"
+                         "x x x a a a"
+                         "x x x a a a";
+    gap: 1.125rem;
+    padding-top: 2rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    /* margin-bottom: 1000px; */
+    /* background-color: black; */
+    justify-items: center;
+    overflow: hidden;
+}
+
+#pixel-man {
+    height: 100%;
+    width: auto;
+    grid-area: p;
+    position: relative;
+    z-index: 1;
+}
+
+#pixel-says {
+    grid-area: y;
+}
+
+#gingerbread-says {
+    grid-area: x;
+}
+
+#gingerbread {
+    height: 100%;
+    width: auto;
+    grid-area: a;
+    align-self: center;
+}
+
+.img-in-candy-frame {
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 25%;
+    /* width: auto; */
+    /* object-fit: cover; */
+    /* object-position: 50% 50%; */
+}
+
+hr {
+    margin: 2rem 0;
+}
+
+hr#special-hr {
+    margin: 0;
+}
+
+@media only screen and (max-width: 390px) {
+    h1 {
+        margin-top: 1rem;
+    }
+}
+
+@media only screen and (min-width: 510px) {
+    h1 {
+        margin-top: 4rem;
+    }
+}
+
+@media only screen and (min-width: 588px) {
+    h1 {
+        margin-top: 5rem;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    html {
+        font-size: 18px;
+    }
+
+    h1 {
+        margin-top: 3.5rem;
+    }
+
+    img[src='/images/hr.png'] {
+        position: absolute;
+        left: -1.5rem;
+        top: -5.5rem;
+        width: 600px;
+    }
+
+    footer {
+        display: none;
+    }
+
+    #contain-the-screen {
+        border: 20px solid green;
+        border-image: repeating-linear-gradient(
+            45deg,
+            #277e62,
+            #277e62 20px,
+            #f4f4f4 20px,
+            #f4f4f4 40px
+        )
+        20;
+        border-top: none;
+        border-bottom: none;
+    }
+}
